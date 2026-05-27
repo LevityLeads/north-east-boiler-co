@@ -86,10 +86,24 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="grid gap-10 lg:grid-cols-3">
             {/* Content */}
             <article className="lg:col-span-2">
-              <div className="prose">
-                {post.content.split('\n\n').map((paragraph, i) => (
-                  <p key={i}>{paragraph}</p>
-                ))}
+              <div className="prose max-w-none">
+                {post.content.split('\n\n').map((block, i) => {
+                  if (block.startsWith('## ')) {
+                    return <h2 key={i} className="mt-8 mb-4 text-2xl font-bold text-navy">{block.slice(3)}</h2>;
+                  }
+                  if (block.startsWith('### ')) {
+                    return <h3 key={i} className="mt-6 mb-3 text-xl font-semibold text-navy">{block.slice(4)}</h3>;
+                  }
+                  if (block.startsWith('- ')) {
+                    const items = block.split('\n').filter((line) => line.startsWith('- '));
+                    return (
+                      <ul key={i} className="mb-4 list-disc pl-6 space-y-2 text-text-muted leading-relaxed">
+                        {items.map((item, j) => <li key={j}>{item.slice(2)}</li>)}
+                      </ul>
+                    );
+                  }
+                  return <p key={i} className="mb-4 text-text-muted leading-relaxed">{block}</p>;
+                })}
               </div>
             </article>
 

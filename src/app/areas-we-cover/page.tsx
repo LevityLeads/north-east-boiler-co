@@ -21,14 +21,14 @@ export const metadata: Metadata = {
 };
 
 const surroundingAreas = [
-  { name: 'Houghton-le-Spring', description: 'Former mining town with a mix of older terraces and modern estates.' },
-  { name: 'Chester-le-Street', description: 'Market town between Durham and Gateshead with varied housing stock.' },
-  { name: 'Seaham', description: 'Coastal town with Victorian terraces and growing new-build developments.' },
-  { name: 'Washington', description: 'New town with 1960s-80s estates and expanding modern housing.' },
-  { name: 'Jarrow', description: 'Traditional terraces and post-war housing along the south bank of the Tyne.' },
-  { name: 'Hebburn', description: 'Residential town with a mix of Victorian and inter-war properties.' },
-  { name: 'Whitley Bay', description: 'Coastal resort with Victorian and Edwardian properties near the seafront.' },
-  { name: 'Boldon', description: 'East and West Boldon, offering a mix of period and modern family homes.' },
+  { name: 'Houghton-le-Spring', description: 'Former mining town with solid stone terraces and 1950s-70s council estates. Back boiler replacements are common here, and many households qualify for ECO4 grants. We typically complete 2-3 installations per week in the Houghton area.' },
+  { name: 'Chester-le-Street', description: 'Market town sitting between Durham and Gateshead with housing ranging from Victorian terraces near the centre to modern estates on the outskirts. Straightforward access and good parking make installations here efficient.' },
+  { name: 'Seaham', description: 'Coastal town with a growing population and new-build developments alongside older mining community housing. Like nearby Sunderland seafront properties, homes close to the coast benefit from marine-grade flue terminals.' },
+  { name: 'Washington', description: 'A large share of our Sunderland installations happen in Washington. The mix of 1960s-80s new town estates and recent housing developments means a range of boiler types, from ageing system boilers needing full replacement to builder-grade combis ready for an upgrade.' },
+  { name: 'Jarrow', description: 'Traditional terraces and post-war housing along the south bank of the Tyne. Many properties here have older heating systems that benefit from modern combi boiler replacements. Good ECO4 eligibility rates across the town.' },
+  { name: 'Hebburn', description: 'Residential town with a mix of Victorian and inter-war properties. The terraced streets near the river often have back boilers still in service. Hebburn is within 15 minutes of our Sunderland base, so response times are quick.' },
+  { name: 'Whitley Bay', description: 'Popular coastal resort with Victorian and Edwardian properties near the seafront and 1930s semis further inland. Coastal exposure means marine-grade flue components are recommended for seafront properties.' },
+  { name: 'Boldon', description: 'East and West Boldon offer a mix of period cottages and modern family homes. Larger detached properties here often benefit from system boilers with unvented cylinders for strong hot water pressure across multiple bathrooms.' },
 ];
 
 export default function AreasWeCoverPage() {
@@ -106,12 +106,24 @@ export default function AreasWeCoverPage() {
         </div>
       </section>
 
-      {/* Coverage map placeholder */}
+      {/* Coverage details */}
       <section className="py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="mb-4 text-2xl font-bold text-navy">Our Coverage Area</h2>
+          <div className="mb-10 max-w-3xl">
+            <h2 className="mb-4 text-2xl font-bold text-navy">Boiler Replacement Across the North East</h2>
+            <p className="mb-4 text-text-muted leading-relaxed">
+              Our coverage area spans roughly 20 miles from our Sunderland base, taking in all major towns and cities across Tyne and Wear and County Durham. Because we are locally based, our engineers know the housing stock in each area and can advise on the right boiler for your specific property type.
+            </p>
+            <p className="mb-4 text-text-muted leading-relaxed">
+              The North East has some of the most varied housing in England, from coastal Victorian villas in South Shields and Whitley Bay to distinctive Tyneside flats in Gateshead, conservation area terraces in Durham, and modern new builds across Washington and Chester-le-Street. Each property type has specific heating requirements, and choosing the right boiler makes a real difference to your comfort and energy bills.
+            </p>
+            <p className="text-text-muted leading-relaxed">
+              We install Worcester Bosch, Vaillant, Baxi, and Ideal boilers across our entire service area, with the same fixed pricing regardless of location. There is no additional charge for travel within our coverage zone. Our free home survey takes about 30 minutes and gives you a clear, written quote with no obligation and no hidden costs.
+            </p>
+          </div>
+          <h2 className="mb-4 text-2xl font-bold text-navy">Our Coverage Map</h2>
           <p className="mb-6 max-w-2xl text-text-muted">
-            We cover a roughly 20-mile radius from our Sunderland base, taking in all major towns and cities across Tyne and Wear and County Durham.
+            We cover all postcodes across SR, DH, NE8-NE11, NE31-NE34, and surrounding areas.
           </p>
           <div className="aspect-video rounded-lg bg-navy/5 border border-border flex items-center justify-center">
             <div className="text-center">

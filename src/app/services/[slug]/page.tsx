@@ -78,6 +78,24 @@ export default async function ServicePage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* Body Sections */}
+      {service.sections && service.sections.length > 0 && (
+        <section className="py-12 md:py-16">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="max-w-3xl">
+              {service.sections.map((section, i) => (
+                <div key={i} className="mb-10 last:mb-0">
+                  <h2 className="mb-4 text-2xl font-bold text-navy">{section.heading}</h2>
+                  {section.content.split('\n').map((paragraph, j) => (
+                    <p key={j} className="mb-4 text-text-muted leading-relaxed">{paragraph}</p>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Benefits */}
       <section className="bg-bg-alt py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-4">

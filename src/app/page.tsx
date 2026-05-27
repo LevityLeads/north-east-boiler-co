@@ -27,11 +27,14 @@ export const metadata: Metadata = {
 };
 
 const homeFaqs = [
-  { question: 'How much does a new boiler cost in Sunderland?', answer: 'A straightforward combi boiler replacement in Sunderland starts from £1,895. System boilers start from around £2,400. The exact price depends on the brand, model, and complexity of the installation. We provide free, no-obligation quotes with all costs included.' },
-  { question: 'How long does a boiler replacement take?', answer: 'A standard combi-to-combi swap takes 4-6 hours. If we need to move the boiler position or replace a back boiler, it may take 1-2 days. We will give you an accurate timescale during the survey.' },
-  { question: 'Are your engineers Gas Safe registered?', answer: 'Yes. Every engineer at North East Boiler Co is Gas Safe registered and carries their card on every job. You can verify our registration number on the Gas Safe Register website.' },
-  { question: 'Do you offer finance on new boilers?', answer: 'Yes. We offer 0% interest finance over 12 months and longer terms up to 10 years. Monthly payments start from as little as £30. No deposit required on most plans.' },
-  { question: 'Can I get a free boiler through the ECO4 scheme?', answer: 'You may qualify for a free boiler replacement if you receive certain benefits or have a low household income. We can check your eligibility quickly, with no obligation. See our free boiler grants page for details.' },
+  { question: 'How much does a new boiler cost in Sunderland?', answer: 'A straightforward combi boiler replacement in Sunderland starts from £1,895 for a mid-range model like a Baxi 800 or Ideal Logic Plus. Premium brands like Worcester Bosch and Vaillant typically range from £2,400 to £3,200 installed. System boilers with a hot water cylinder start from around £2,400. Back boiler replacements cost more due to the additional removal work, typically £2,500 to £3,500. Every quote includes the boiler, installation, magnetic filter, system flush, and warranty registration.' },
+  { question: 'How long does a boiler replacement take?', answer: 'A standard combi-to-combi swap where the boiler stays in the same position takes 4 to 6 hours. If we need to move the boiler to a new location, it is usually a full day. Back boiler replacements take 2 days because of the removal work and pipework rerouting. System boiler installations typically take 1 to 2 days. We will give you an accurate timescale during the survey so you can plan accordingly.' },
+  { question: 'Are your engineers Gas Safe registered?', answer: 'Yes. Every engineer at North East Boiler Co is Gas Safe registered and carries their card on every job. We are also accredited installers for Worcester Bosch, Vaillant, and Baxi, which allows us to offer extended manufacturer warranties of up to 12 years on selected models. You can verify any engineer\'s registration on the Gas Safe Register website.' },
+  { question: 'Do you offer finance on new boilers?', answer: 'Yes. We offer 0% interest finance over 12 months, meaning you pay exactly the same as you would upfront, just in smaller monthly payments. We also offer longer terms up to 10 years for lower monthly payments. No deposit is required on most plans, and decisions are usually instant. See our boiler finance page for full details and example monthly costs.' },
+  { question: 'Can I get a free boiler through the ECO4 scheme?', answer: 'You may qualify for a completely free boiler replacement if you receive benefits such as Universal Credit, Pension Credit, Child Tax Credits, or Income Support. Sunderland has high eligibility rates due to its deprivation ranking. Even if you are not on benefits, the LA Flex pathway may cover you if your household income is below a certain threshold. We handle the entire application process at no cost.' },
+  { question: 'What areas do you cover?', answer: 'We are based in Sunderland and cover a roughly 20-mile radius including Durham, Gateshead, South Shields, Washington, Houghton-le-Spring, Chester-le-Street, Seaham, Jarrow, Hebburn, Whitley Bay, and Boldon. There is no additional travel charge within our coverage area. See our areas we cover page for the full list.' },
+  { question: 'What brands of boiler do you install?', answer: 'We install Worcester Bosch, Vaillant, Baxi, and Ideal boilers. These are the four most reliable and widely supported brands in the UK. During your survey, our engineer will recommend the best brand and model for your property based on your hot water demand, available space, and budget. We never push a particular brand for our benefit.' },
+  { question: 'Do I need to be home during installation?', answer: 'Yes, an adult needs to be present at the property during the installation. Our engineers will need access to your boiler, radiators, and potentially the loft space. We will give you a morning arrival time and keep you updated throughout the day. For most combi swaps, we aim to have everything finished by late afternoon.' },
 ];
 
 export default function HomePage() {
@@ -59,8 +62,29 @@ export default function HomePage() {
       {/* Trust badges */}
       <TrustBadges />
 
-      {/* Services */}
+      {/* Why replace your boiler */}
       <section className="py-12 md:py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="max-w-3xl">
+            <h2 className="mb-4 text-2xl font-bold text-navy md:text-3xl">Boiler Replacement Specialists in Sunderland</h2>
+            <p className="mb-4 text-text-muted leading-relaxed">
+              We focus on one thing: replacing boilers properly. While other companies split their time between repairs, servicing, and installations, we concentrate entirely on boiler replacements across Sunderland and the wider North East. That focus means faster turnarounds, better pricing from manufacturers, and engineers who fit new boilers every single day.
+            </p>
+            <p className="mb-4 text-text-muted leading-relaxed">
+              Every installation starts with a free home survey where we assess your current system, check your mains water pressure, measure your hot water demand, and recommend the right boiler for your home. You receive a written, fixed-price quote with no hidden costs. Most combi boiler swaps are completed in a single day, with your heating and hot water back on before we leave.
+            </p>
+            <p className="mb-4 text-text-muted leading-relaxed">
+              We are Gas Safe registered and hold accreditations with Worcester Bosch, Vaillant, and Baxi. These accreditations allow us to offer extended manufacturer warranties of up to 12 years on selected models. All installations include a magnetic system filter, a full powerflush, and chemical inhibitor to keep your new boiler running efficiently for years.
+            </p>
+            <p className="text-text-muted leading-relaxed">
+              Not sure what you need? Our guide on <Link href="/blog/combi-vs-system-boiler/" className="text-orange hover:text-orange-dark underline">combi vs system boilers</Link> explains the difference, or you can check our <Link href="/blog/new-boiler-cost-sunderland/" className="text-orange hover:text-orange-dark underline">Sunderland boiler cost guide</Link> for 2026 pricing. If budget is a concern, many Sunderland households qualify for a <Link href="/services/free-boiler-grants/" className="text-orange hover:text-orange-dark underline">free boiler under the ECO4 scheme</Link>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="bg-bg-alt py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="mb-3 text-2xl font-bold text-navy md:text-3xl">Our Boiler Services</h2>
           <p className="mb-8 max-w-2xl text-text-muted">
@@ -81,7 +105,7 @@ export default function HomePage() {
       </section>
 
       {/* Why choose us */}
-      <section className="bg-bg-alt py-12 md:py-16">
+      <section className="py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="mb-8 text-center text-2xl font-bold text-navy md:text-3xl">Why Choose North East Boiler Co?</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -101,6 +125,24 @@ export default function HomePage() {
                 <p className="text-sm text-text-muted leading-relaxed">{usp.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sunderland heating context */}
+      <section className="bg-bg-alt py-12 md:py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="max-w-3xl">
+            <h2 className="mb-4 text-2xl font-bold text-navy md:text-3xl">Why Sunderland Homes Need the Right Boiler</h2>
+            <p className="mb-4 text-text-muted leading-relaxed">
+              Sunderland sits right on the North East coast, which means cold winters, damp air, and homes that work their heating systems hard from October through to April. Getting the right boiler installed properly is not a luxury here. It is a necessity.
+            </p>
+            <p className="mb-4 text-text-muted leading-relaxed">
+              The city&apos;s housing stock ranges from Victorian terraces in Ashbrooke and Roker (many still running on back boilers from the 1970s) through to modern new builds in Washington and Doxford Park. Each property type needs a different approach. A compact 25kW combi suits a two-bedroom terrace, while a larger semi with multiple bathrooms may need a system boiler with a hot water cylinder.
+            </p>
+            <p className="text-text-muted leading-relaxed">
+              Sunderland also ranks 28th on the Index of Multiple Deprivation, which means a significant proportion of households qualify for a free boiler replacement under the government&apos;s <Link href="/services/free-boiler-grants/" className="text-orange hover:text-orange-dark underline">ECO4 scheme</Link>. If you receive benefits like Universal Credit or Pension Credit, you could have a brand new boiler fitted at no cost. We handle the application process from start to finish.
+            </p>
           </div>
         </div>
       </section>

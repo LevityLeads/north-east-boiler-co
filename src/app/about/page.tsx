@@ -80,8 +80,25 @@ export default function AboutPage() {
             <p className="mb-4 text-text-muted leading-relaxed">
               We started with a simple idea: focus exclusively on boiler replacements, get really good at it, and treat every customer the way we would want to be treated. No high-pressure sales tactics. No commission-driven recommendations. Just honest advice and quality work.
             </p>
-            <p className="text-text-muted leading-relaxed">
+            <p className="mb-4 text-text-muted leading-relaxed">
               Today, we have installed over 500 boilers across Sunderland, Durham, Gateshead, and South Shields. Our engineers are Gas Safe registered, manufacturer-trained, and genuinely care about doing the job properly. That is why our customers keep recommending us to their neighbours.
+            </p>
+            <h2 className="mb-4 mt-8 text-2xl font-bold text-navy">What Makes Us Different</h2>
+            <p className="mb-4 text-text-muted leading-relaxed">
+              Most heating companies try to do everything: boiler repairs, annual servicing, plumbing, even bathrooms. We chose the opposite approach. We specialise in one thing: boiler replacements. Every engineer on our team fits new boilers every day, which means faster installations, fewer mistakes, and better results.
+            </p>
+            <p className="mb-4 text-text-muted leading-relaxed">
+              Because we focus purely on replacements, we buy boilers in volume directly from manufacturers. That buying power translates to better prices for you and access to extended warranty programmes that smaller companies cannot offer. Our Worcester Bosch accreditation means we can register warranties of up to 12 years on selected models.
+            </p>
+            <p className="mb-4 text-text-muted leading-relaxed">
+              We also know the North East. Our engineers have worked in hundreds of Sunderland terraces, Durham conservation area properties, Gateshead Tyneside flats, and South Shields coastal homes. Each type brings specific challenges, from back boiler removals in Victorian properties to salt-resistant flue terminals on the coast. We have seen it all and know how to handle it.
+            </p>
+            <h2 className="mb-4 mt-8 text-2xl font-bold text-navy">Our Commitment to You</h2>
+            <p className="mb-4 text-text-muted leading-relaxed">
+              Every quote we provide is written, itemised, and fixed. The price you agree to is the price you pay. No additional charges on installation day, no hidden extras. We explain every line so you know exactly what you are paying for.
+            </p>
+            <p className="text-text-muted leading-relaxed">
+              We are also an approved ECO4 installer, which means we can help eligible households across the North East access free boiler replacements funded by the government. We handle the entire application process, from eligibility check to installation, at no cost to qualifying homeowners.
             </p>
           </div>
         </div>

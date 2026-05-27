@@ -39,8 +39,11 @@ export default function ContactPage() {
           <h1 className="mb-4 text-3xl font-bold text-white md:text-4xl">
             Get Your Free Boiler Quote
           </h1>
-          <p className="text-lg text-white/80">
-            Fill in the form below and we will call you within 2 hours to arrange your free home survey.
+          <p className="mb-4 text-lg text-white/80">
+            Fill in the form below and we will call you within 2 hours to arrange your free home survey. No obligation, no pressure, just honest advice on the right boiler for your home.
+          </p>
+          <p className="text-white/60 text-sm">
+            We cover Sunderland, Durham, Gateshead, South Shields, and all surrounding areas. Whether you need an emergency replacement or you are planning ahead, we will give you a fixed price with no hidden costs.
           </p>
         </div>
       </section>
