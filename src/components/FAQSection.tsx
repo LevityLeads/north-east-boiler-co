@@ -1,8 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import SchemaMarkup from './SchemaMarkup';
-import { faqSchema } from '@/lib/schema';
 
 interface FAQ {
   question: string;
@@ -23,7 +21,6 @@ export default function FAQSection({ faqs, heading = 'Frequently Asked Questions
 
   return (
     <section className="py-12 md:py-16">
-      <SchemaMarkup schema={faqSchema(faqs)} />
       <h2 className="mb-8 text-2xl font-bold text-navy md:text-3xl">{heading}</h2>
       <div className="space-y-3">
         {faqs.map((faq, index) => (

@@ -1,7 +1,4 @@
 import Link from 'next/link';
-import SchemaMarkup from './SchemaMarkup';
-import { breadcrumbSchema } from '@/lib/schema';
-import { SITE } from '@/content/site';
 
 interface BreadcrumbItem {
   label: string;
@@ -13,14 +10,8 @@ interface BreadcrumbNavProps {
 }
 
 export default function BreadcrumbNav({ items }: BreadcrumbNavProps) {
-  const schemaItems = items.map((item) => ({
-    name: item.label,
-    url: `${SITE.domain}${item.href}`,
-  }));
-
   return (
     <nav aria-label="Breadcrumb" className="py-3">
-      <SchemaMarkup schema={breadcrumbSchema(schemaItems)} />
       <ol className="flex flex-wrap items-center gap-1 text-sm text-text-muted">
         {items.map((item, index) => (
           <li key={item.href} className="flex items-center gap-1">
