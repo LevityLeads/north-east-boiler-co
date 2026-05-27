@@ -6,7 +6,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FAQSection from '@/components/FAQSection';
 import QuoteForm from '@/components/QuoteForm';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import { localBusinessSchema, aggregateRatingSchema, breadcrumbSchema } from '@/lib/schema';
+import { localBusinessSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { locations, getLocationBySlug } from '@/content/locations';
 import { services } from '@/content/services';
 import { SITE } from '@/content/site';
@@ -44,14 +44,14 @@ export default async function LocationPage({ params }: PageProps) {
 
   const breadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: 'Locations', href: '/locations/sunderland/' },
+    { label: 'Areas We Cover', href: '/areas-we-cover/' },
     { label: location.city, href: `/locations/${location.slug}/` },
   ];
 
   return (
     <>
       <SchemaMarkup schema={localBusinessSchema()} />
-      <SchemaMarkup schema={aggregateRatingSchema()} />
+      <SchemaMarkup schema={faqSchema(location.faqs)} />
       <SchemaMarkup schema={breadcrumbSchema(breadcrumbs.map((b) => ({ name: b.label, url: `${SITE.domain}${b.href}` })))} />
 
       <div className="mx-auto max-w-6xl px-4">

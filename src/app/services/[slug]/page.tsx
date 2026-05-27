@@ -5,7 +5,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FAQSection from '@/components/FAQSection';
 import QuoteForm from '@/components/QuoteForm';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import { localBusinessSchema, serviceSchema, breadcrumbSchema } from '@/lib/schema';
+import { localBusinessSchema, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { services, getServiceBySlug } from '@/content/services';
 import { SITE } from '@/content/site';
 
@@ -42,7 +42,6 @@ export default async function ServicePage({ params }: PageProps) {
 
   const breadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services/combi-boiler-installation/' },
     { label: service.shortTitle, href: `/services/${service.slug}/` },
   ];
 
@@ -50,6 +49,7 @@ export default async function ServicePage({ params }: PageProps) {
     <>
       <SchemaMarkup schema={localBusinessSchema()} />
       <SchemaMarkup schema={serviceSchema(service)} />
+      <SchemaMarkup schema={faqSchema(service.faqs)} />
       <SchemaMarkup schema={breadcrumbSchema(breadcrumbs.map((b) => ({ name: b.label, url: `${SITE.domain}${b.href}` })))} />
 
       <div className="mx-auto max-w-6xl px-4">

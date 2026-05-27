@@ -6,6 +6,7 @@ export function localBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'HeatingContractor',
+    '@id': `${SITE.domain}/#business`,
     name: SITE.name,
     description: SITE.tagline,
     url: SITE.domain,
@@ -52,6 +53,12 @@ export function localBusinessSchema() {
         name: 'Gas Safe Register',
       },
     },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      ratingCount: '127',
+    },
   };
 }
 
@@ -63,13 +70,16 @@ export function serviceSchema(service: Service) {
     description: service.metaDescription,
     provider: {
       '@type': 'HeatingContractor',
+      '@id': `${SITE.domain}/#business`,
       name: SITE.name,
       telephone: SITE.phone,
     },
-    areaServed: {
-      '@type': 'City',
-      name: 'Sunderland',
-    },
+    areaServed: [
+      { '@type': 'City', name: 'Sunderland' },
+      { '@type': 'City', name: 'Durham' },
+      { '@type': 'City', name: 'Gateshead' },
+      { '@type': 'City', name: 'South Shields' },
+    ],
     ...(service.priceFrom && {
       offers: {
         '@type': 'Offer',
@@ -135,16 +145,7 @@ export function blogPostingSchema(post: BlogPost) {
   };
 }
 
+/** @deprecated aggregateRating is now embedded in localBusinessSchema(). Remove this call from all pages. */
 export function aggregateRatingSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'HeatingContractor',
-    name: SITE.name,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      bestRating: '5',
-      ratingCount: '127',
-    },
-  };
+  return null;
 }

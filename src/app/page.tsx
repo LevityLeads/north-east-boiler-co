@@ -7,14 +7,14 @@ import BlogCard from '@/components/BlogCard';
 import FAQSection from '@/components/FAQSection';
 import QuoteForm from '@/components/QuoteForm';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import { localBusinessSchema, aggregateRatingSchema, breadcrumbSchema } from '@/lib/schema';
+import { localBusinessSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { services } from '@/content/services';
 import { locations } from '@/content/locations';
 import { blogPosts } from '@/content/blog';
 import { SITE } from '@/content/site';
 
 export const metadata: Metadata = {
-  title: `New Boiler Sunderland | Boiler Replacement from £1,895 | ${SITE.name}`,
+  title: { absolute: `New Boiler Sunderland | Boiler Replacement from £1,895 | ${SITE.name}` },
   description: 'Professional boiler replacement in Sunderland from £1,895. Gas Safe registered, next-day installation, free quotes. Combi, system, and back boiler specialists.',
   alternates: { canonical: '/' },
   openGraph: {
@@ -43,7 +43,7 @@ export default function HomePage() {
   return (
     <>
       <SchemaMarkup schema={localBusinessSchema()} />
-      <SchemaMarkup schema={aggregateRatingSchema()} />
+      <SchemaMarkup schema={faqSchema(homeFaqs)} />
       <SchemaMarkup schema={breadcrumbSchema([{ name: 'Home', url: SITE.domain + '/' }])} />
 
       {/* Hero */}
